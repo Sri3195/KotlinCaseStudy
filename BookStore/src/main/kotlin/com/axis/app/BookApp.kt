@@ -23,7 +23,11 @@ fun main(){
 
         println("Enter your choice")
         var choice=scanner.nextInt()
+<<<<<<< HEAD
         scanner.nextLine()
+=======
+        sc.nextLine()
+>>>>>>> 26eaabb99cd79633a36ed07c1131a5b473e6c9d7
 
         when(choice){
 
