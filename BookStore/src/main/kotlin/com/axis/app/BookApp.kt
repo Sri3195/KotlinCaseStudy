@@ -5,7 +5,7 @@ import java.util.Scanner
 
 
 fun main(){
-    var sc=Scanner(System.`in`)
+    var scanner=Scanner(System.`in`)
     var bookService = BookService()
 
 
@@ -22,23 +22,23 @@ fun main(){
         println("8.Sort Book By Price")
 
         println("Enter your choice")
-        var choice=sc.nextInt()
+        var choice=scanner.nextInt()
         sc.nextLine()
 
         when(choice){
 
             1->{
                 println("Enter book Id")
-                var bookId=sc.nextLine()
+                var bookId=scanner.nextLine()
 
                 println("Enter book title")
-                var title=sc.nextLine()
+                var title=scanner.nextLine()
                 println("Enter book author")
-                var author=sc.nextLine()
+                var author=scanner.nextLine()
                 println("Enter book category")
-                var category=sc.nextLine()
+                var category=scanner.nextLine()
                 println("Enter book price")
-                var price=sc.nextFloat()
+                var price=scanner.nextFloat()
 
                 var book=Book(bookId,title,author,category,price)
                 var result=book.validations()
@@ -52,18 +52,18 @@ fun main(){
 
             2->{
                 println("Enter book Id to modify")
-                var id=sc.nextLine()
+                var id=scanner.nextLine()
                 println("Enter which column you want to edit")
-                var column=sc.nextLine()
+                var column=scanner.nextLine()
                 println("Enter which the value to be updated")
-                var value=sc.nextLine()
+                var value=scanner.nextLine()
 
                 bookService.modifyBook(id,column,value)
             }
 
             3->{
                 println("Enter book id to delete")
-                var id=sc.nextLine()
+                var id=scanner.nextLine()
                 bookService.deleteBook(id)
             }
 
@@ -73,19 +73,19 @@ fun main(){
 
             5->{
                 println("Enter book Id to display")
-                var id=sc.nextLine()
+                var id=scanner.nextLine()
                 bookService.displaySpecificBook(id)
             }
 
             6->{
                 println("Enter book title to search")
-                var title=sc.nextLine()
+                var title=scanner.nextLine()
                 bookService.searchByTitle(title)
             }
 
             7->{
                 println("Enter book author to search")
-                var author=sc.nextLine()
+                var author=scanner.nextLine()
                 bookService.searchByAuthor(author)
             }
             8->{
