@@ -29,39 +29,55 @@ class BookService {
         if(result)
             println("deleted book successfully")
         else
-            println("deletion failed")
+            println("Book not found")
     }
 
     fun displayAll(){
         var books=bookUtil.displayAll()
         println("------All Book Details-------")
+        if(books.isNotEmpty()){
         for(book in books){
             println(book)
-        }
+        }}
+        else{
+            println("No books to display")
+            }
     }
 
     fun displaySpecificBook(id:String)
     {
         var books=bookUtil.displaySpecificBook(id)
         println("---------Book Details -------")
+        if(books.isNotEmpty()){
         for(book in books){
             println(book)
+        }}
+        else{
+            println("Book not found")
         }
     }
 
     fun searchByTitle(title:String){
         var books=bookUtil.searchByTitle(title)
         println("--------------Book Details ------------")
+        if(books.isNotEmpty()){
         for(book in books){
             println(book)
+        }}
+        else{
+            println("Book not found")
         }
     }
 
     fun searchByAuthor(author:String){
         var books=bookUtil.searchByAuthor(author)
         println("----------Book Details ---------")
+        if(books.isNotEmpty()){
         for(book in books){
             println(book)
+        }}
+        else{
+            println("Book not found")
         }
     }
 
