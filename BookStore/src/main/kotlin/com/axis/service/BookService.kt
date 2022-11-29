@@ -7,6 +7,7 @@ import com.axis.util.BookUtil
 class BookService {
 
     var bookUtil=BookUtil()
+    var bookError="Book not found"
 
     fun addBook(book: Book)
     {
@@ -29,7 +30,7 @@ class BookService {
         if(result)
             println("deleted book successfully")
         else
-            println("Book not found")
+            println("$bookError")
     }
 
     fun displayAll(){
@@ -53,7 +54,7 @@ class BookService {
             println(book)
         }}
         else{
-            println("Book not found")
+            println("$bookError")
         }
     }
 
@@ -65,7 +66,7 @@ class BookService {
             println(book)
         }}
         else{
-            println("Book not found")
+            println("$bookError")
         }
     }
 
@@ -77,7 +78,7 @@ class BookService {
             println(book)
         }}
         else{
-            println("Book not found")
+            println("$bookError")
         }
     }
 
